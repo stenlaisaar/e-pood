@@ -1,0 +1,34 @@
+.navigation {
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto 20px 20px;
+}
+
+.navigation h1 {
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+ul li {
+    float: right;
+}
+
+ul li a {
+    padding: 14px 16px;
+    color: white;
+    font-size: 25px;
+}
+
+ul li a:hover {
+    color: gray;
+}

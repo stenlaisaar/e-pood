@@ -1,7 +1,7 @@
-import { Product } from './product.js';
-import { cart } from './cart.js';
-import { Order } from './order.js';
-import { Customer } from './customer.js';
+import { Product } from './constructors/product.js';
+import { cart } from './constructors/cart.js';
+import { Order } from './constructors/order.js';
+import { Customer } from './constructors/customer.js';
 
 
 const laptop = new Product(1, `Sülearvuti`, 999.99, `Elektroonika`);
