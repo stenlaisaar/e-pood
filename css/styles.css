@@ -32,3 +32,11 @@ ul li a {
 ul li a:hover {
     color: gray;
 }
+
+
+.item-container {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: gray;
+    display: grid;
+}
