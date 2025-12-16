@@ -6,25 +6,24 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>E-pood</title>
 </head>
-<header>
-    <div class="navigation">
-        <h1>E-Pood</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Favourites</a></li>
-                <li><a href="#">Cart</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 <body>
-    <h1>E-Pood</h1>
-    <div class="main-item-container">
-        <div class="item-container">
-            <h3>Laptop</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <header>
+        <div class="navigation">
+            <h1>E-Pood</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Favourites</a></li>
+                    <li><a href="#">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+
+    <h1>E-Pood</h1>
+
+    <div class="main-item-container" id="main-item-container">
+        <p>Loading products…</p>
     </div>
 
     <div id="output"></div>
