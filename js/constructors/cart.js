@@ -14,4 +14,7 @@ export class cart {
     get totalItems() {
         return this.items.reduce((total, item) => total + item.quantity, 0);
     }
+    clearCart() {
+        this.items = [];
+    }
 }

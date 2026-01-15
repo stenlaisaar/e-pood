@@ -1,4 +1,4 @@
-export const displayAllProducts = (products, shoppingCart) => {
+export const displayAllProducts = (products, shoppingCart, favorites) => {
     console.debug('displayAllProducts called with', products);
     let container = document.getElementById('main-item-container');
     if (!container) container = document.querySelector('.main-item-container');
@@ -17,6 +17,20 @@ export const displayAllProducts = (products, shoppingCart) => {
         const countEl = document.getElementById('cart-count');
         if (countEl && shoppingCart) countEl.textContent = shoppingCart.totalItems;
     };
+
+    const updateFavoritesCount = () => {
+        const countEl = document.getElementById('favorites-count');
+        if (countEl && favorites) countEl.textContent = favorites.totalFavorites;
+    };
+
+    // Handle clear cart button
+    const clearCartBtn = document.getElementById('clear-cart-btn');
+    if (clearCartBtn && shoppingCart) {
+        clearCartBtn.addEventListener('click', () => {
+            shoppingCart.clearCart();
+            updateCartCount();
+        });
+    }
 
     if (!Array.isArray(products) || products.length === 0) {
         const empty = document.createElement('p');
@@ -48,7 +62,24 @@ export const displayAllProducts = (products, shoppingCart) => {
                     setTimeout(() => cartButton.textContent = 'Add to Cart', 700);
                 });
 
+                const favoritesButton = document.createElement('button');
+                favoritesButton.classList.add('favorites-btn');
+                const isFav = favorites && favorites.isFavorite(product.id);
+                favoritesButton.textContent = isFav ? 'Favorited' : 'Add to Favorites';
+                favoritesButton.addEventListener('click', () => {
+                    if (!favorites) return console.warn('No favorites provided');
+                    if (favorites.isFavorite(product.id)) {
+                        favorites.removeProduct(product.id);
+                        favoritesButton.textContent = 'Add to Favorites';
+                    } else {
+                        favorites.addProduct(product);
+                        favoritesButton.textContent = 'Favorited';
+                    }
+                    updateFavoritesCount();
+                });
+
                 productCard.appendChild(cartButton);
+                productCard.appendChild(favoritesButton);
                 productsContainer.appendChild(productCard);
             } catch (err) {
                 console.error('Error rendering product', err);
@@ -64,5 +95,10 @@ export const displayAllProducts = (products, shoppingCart) => {
     if (shoppingCart) {
         const countEl = document.getElementById('cart-count');
         if (countEl) countEl.textContent = shoppingCart.totalItems;
+    }
+
+    if (favorites) {
+        const countEl = document.getElementById('favorites-count');
+        if (countEl) countEl.textContent = favorites.totalFavorites;
     }
 };
