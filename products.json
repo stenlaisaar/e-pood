@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Sülearvuti",
+      "price": 999.99,
+      "category": "Elektroonika",
+      "description": "A fast lightweight laptop for everyday use.",
+      "image": "https://via.placeholder.com/300x200?text=Laptop"
+    },
+    {
+      "id": 2,
+      "title": "Telefon",
+      "price": 299.99,
+      "category": "Elektroonika",
+      "description": "High-quality wireless headphones with noise cancellation.",
+      "image": "https://via.placeholder.com/300x200?text=Headphones"
+    },
+    {
+      "id": 3,
+      "title": "Kaamera",
+      "price": 599.99,
+      "category": "Elektroonika",
+      "description": "Professional digital camera for photography enthusiasts.",
+      "image": "https://via.placeholder.com/300x200?text=Camera"
+    },
+    {
+      "id": 4,
+      "title": "Raadio",
+      "price": 799.99,
+      "category": "Elektroonika",
+      "description": "Latest smartphone with advanced features and 5G connectivity.",
+      "image": "https://via.placeholder.com/300x200?text=Smartphone"
+    },
+    {
+      "id": 5,
+      "title": "Tablet",
+      "price": 449.99,
+      "category": "Elektroonika",
+      "description": "Portable tablet perfect for reading, drawing, and multimedia.",
+      "image": "https://via.placeholder.com/300x200?text=Tablet"
+    },
+    {
+      "id": 6,
+      "title": "Külmik",
+      "price": 899.99,
+      "category": "Kodutehnika",
+      "description": "Energy-efficient refrigerator with smart temperature control.",
+      "image": "https://via.placeholder.com/300x200?text=Fridge"
+    },
+    {
+      "id": 7,
+      "title": "Pliit",
+      "price": 749.99,
+      "category": "Kodutehnika",
+      "description": "Modern electric stove with multiple cooking modes.",
+      "image": "https://via.placeholder.com/300x200?text=Stove"
+    },
+    {
+      "id": 8,
+      "title": "Nõudepesumasin",
+      "price": 599.99,
+      "category": "Kodutehnika",
+      "description": "Efficient dishwasher with quiet operation and multiple wash cycles.",
+      "image": "https://via.placeholder.com/300x200?text=Dishwasher"
+    }
+  ]
+}

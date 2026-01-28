@@ -5,13 +5,12 @@ import { displayAllProducts } from "./views/allProductsView.js";
 
 export const navigate = (view, param) => {
   const views = {
-    allProducts: () => displayAllProductsView(param || "all"), // Kasuta vaikeväärtust "all" kategooriana
-    productDetail: () => dispalyProductDetailView(param), // üks toode
-    cart: () => displayCartView(), // Näita ostukorvi vaadet
+    allProducts: () => displayAllProductsView(param || "all"),
+    productDetail: () => dispalyProductDetailView(param),
+    cart: () => displayCartView(),
     favorites: () => displayFavoritesView(),
   };
 
-  //Vali ja käivita sobiv vaade
   if (views[view]) {
     views[view](); 
 

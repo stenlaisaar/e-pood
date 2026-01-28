@@ -23,7 +23,6 @@ export const displayAllProducts = (products, shoppingCart, favorites) => {
         if (countEl && favorites) countEl.textContent = favorites.totalFavorites;
     };
 
-    // Handle clear cart button
     const clearCartBtn = document.getElementById('clear-cart-btn');
     if (clearCartBtn && shoppingCart) {
         clearCartBtn.addEventListener('click', () => {
